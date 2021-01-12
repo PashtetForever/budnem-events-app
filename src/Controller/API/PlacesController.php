@@ -1,8 +1,6 @@
 <?php
 namespace App\Controller\API;
 
-use App\Repositories\Stub\PlacesRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,13 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/api/places/")
  */
-class PlacesController extends AbstractController
+class PlacesController extends ApiControllerBase
 {
-    private PlacesRepository $placesRepository;
-
-    public function __construct(PlacesRepository $placesRepository)
+    public function __construct()
     {
-        $this->placesRepository = $placesRepository;
+        parent::__construct('PlacesRepository');
     }
 
     /**
@@ -24,6 +20,6 @@ class PlacesController extends AbstractController
      */
     public function index(): Response
     {
-        return new JsonResponse($this->placesRepository->getItems()->toArray());
+        return new JsonResponse($this->repository->getItems()->toArray());
     }
 }

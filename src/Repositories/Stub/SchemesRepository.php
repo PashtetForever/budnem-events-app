@@ -4,9 +4,10 @@
 namespace App\Repositories\Stub;
 
 
+use App\Repositories\Repository;
 use Illuminate\Support\Collection;
 
-class SchemesRepository
+class SchemesRepository extends Repository
 {
     public function __construct()
     {

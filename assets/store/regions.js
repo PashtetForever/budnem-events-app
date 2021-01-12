@@ -16,7 +16,6 @@ export default {
   },
   actions: {
     async GET_REGIONS({commit}) {
-      console.log(process.env.API_URI + '/regions')
       await axios.get(process.env.API_URI + '/regions')
         .then((response) => {
           commit('loadRegions', Object.values(response.data))

@@ -1,4 +1,7 @@
 {
+    "arrilot/bitrix-models": {
+        "version": "0.8.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -17,7 +20,13 @@
     "doctrine/lexer": {
         "version": "1.2.1"
     },
+    "easycorp/easy-deploy-bundle": {
+        "version": "v1.0.6"
+    },
     "illuminate/contracts": {
+        "version": "v5.7.28"
+    },
+    "illuminate/pagination": {
         "version": "v5.7.28"
     },
     "illuminate/support": {
@@ -96,6 +105,9 @@
     "symfony/event-dispatcher-contracts": {
         "version": "v1.1.9"
     },
+    "symfony/expression-language": {
+        "version": "v4.4.18"
+    },
     "symfony/filesystem": {
         "version": "v4.4.18"
     },
@@ -164,6 +176,9 @@
     },
     "symfony/polyfill-php80": {
         "version": "v1.22.0"
+    },
+    "symfony/process": {
+        "version": "v4.4.18"
     },
     "symfony/routing": {
         "version": "4.2",

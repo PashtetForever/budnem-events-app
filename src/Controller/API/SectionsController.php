@@ -2,8 +2,6 @@
 
 namespace App\Controller\API;
 
-use App\Repositories\Stub\SectionsRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,13 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/api/sections/")
  */
-class SectionsController extends AbstractController
+class SectionsController extends ApiControllerBase
 {
-    private SectionsRepository $sectionsRepository;
-
-    public function __construct(SectionsRepository $sectionsRepository)
+    public function __construct()
     {
-        $this->sectionsRepository = $sectionsRepository;
+        parent::__construct('SectionsRepository');
     }
 
     /**
@@ -25,6 +21,6 @@ class SectionsController extends AbstractController
      */
     public function index(): Response
     {
-        return new JsonResponse($this->sectionsRepository->getItems()->toArray());
+        return new JsonResponse($this->repository->getItems()->toArray());
     }
 }

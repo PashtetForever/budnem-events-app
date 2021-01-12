@@ -2,8 +2,6 @@
 
 namespace App\Controller\API;
 
-use App\Repositories\Stub\RegionsRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -11,13 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/api/regions/")
  */
-class RegionsController extends AbstractController
+class RegionsController extends ApiControllerBase
 {
-    private RegionsRepository $regionsRepository;
-
-    public function __construct(RegionsRepository $regionsRepository)
+    public function __construct()
     {
-        $this->regionsRepository = $regionsRepository;
+        parent::__construct('RegionsRepository');
     }
 
     /**
@@ -25,6 +21,6 @@ class RegionsController extends AbstractController
      */
     public function index(): Response
     {
-        return new JsonResponse($this->regionsRepository->getItems()->toArray());
+        return new JsonResponse($this->repository->getItems()->toArray());
     }
 }
