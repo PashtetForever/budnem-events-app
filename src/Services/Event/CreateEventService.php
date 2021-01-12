@@ -8,6 +8,6 @@ class CreateEventService
 {
     public function createEvent()
     {
-        
+
     }
 }

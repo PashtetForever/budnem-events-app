@@ -9,7 +9,7 @@ return new class extends DefaultDeployer
         return $this->getConfigBuilder()
             ->server('root@77.246.157.200')
             ->deployDir('/var/www/inhouse/data/www/budnyam.net/local/symfony_app')
-            ->repositoryUrl('git@github.com:symfony/symfony-demo.git')
+            ->repositoryUrl('git@github.com:PashtetForever/budnem-events-app.git')
             ->repositoryBranch('master');
     }
 };

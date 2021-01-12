@@ -11,6 +11,8 @@
 
 docker/mysql/data
 docker/nginx/logs
+.idea
+/package-lock.json
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
@@ -18,3 +20,4 @@ docker/nginx/logs
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
