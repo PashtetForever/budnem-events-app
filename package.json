@@ -5,6 +5,7 @@
         "element-ui": "^2.14.1",
         "fs": "0.0.1-security",
         "moment": "^2.29.1",
+        "node": "^15.4.0",
         "vue": "^2.6.12",
         "vue-loader": "^15.9.6",
         "vue-template-compiler": "^2.6.12",

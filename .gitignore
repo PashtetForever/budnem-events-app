@@ -5,6 +5,7 @@ docker/nginx/logs
 deploy.sh
 /config/prod/deploy.php
 composer.lock
+.env
 
 ###> symfony/framework-bundle ###
 /.env.local
