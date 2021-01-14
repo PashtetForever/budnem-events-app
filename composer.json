@@ -18,11 +18,11 @@
         "symfony/framework-bundle": "*",
         "symfony/twig-bundle": "4.4.*",
         "symfony/webpack-encore-bundle": "^1.8",
-        "symfony/yaml": "*"
+        "symfony/yaml": "*",
+        "symfony/maker-bundle": "^1.27"
     },
     "require-dev": {
-        "matiaspub/bx-api-docs": "dev-master",
-        "symfony/maker-bundle": "^1.27"
+        "matiaspub/bx-api-docs": "dev-master"
     },
     "repositories": [
         {
