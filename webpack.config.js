@@ -3,9 +3,9 @@ const Encore = require('@symfony/webpack-encore')
 
 const envPath = './.env';
 var env = dotenv.config({path: envPath}).parsed;
-
 Encore
   .setOutputPath('public/build/')
+  .setManifestKeyPrefix(env.API_URI)
   .setPublicPath('/build')
   .addEntry('app', './assets/app.js')
   .cleanupOutputBeforeBuild()
