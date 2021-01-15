@@ -6,7 +6,8 @@ var env = dotenv.config({path: envPath}).parsed;
 
 Encore
   .setOutputPath('public/build/')
-  .setPublicPath('/build')
+  .setPublicPath(env.FRONTEND_PUBLIC_PATH)
+  .setManifestKeyPrefix('build')
   .addEntry('app', './assets/app.js')
   .cleanupOutputBeforeBuild()
   .enableBuildNotifications()
